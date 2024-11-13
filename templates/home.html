@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartLoanCalculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <h1>SmartLoanCalculator</h1>
+    <h2>V 2.0</h2>
+
+    <div class="information_data">
+        <label for="loanAmount">$
+        <input type="number" id="loan_amount" placeholder="Loan Amount"/></label>
+        <label for="loan_term">
+        <input type="number" id="loan_term" placeholder="Loan Term"/>Years</label>
+        <label for="interest_rate">
+        <input type="number" id="interest_rate" placeholder="Interest Rate"/>%</label>
+            <label for="fixed_rate">Fixed Rate
+            <input type="radio" name="interest_option" id="fixed_rate" value="fixed_rate" checked/></label>
+            <label for="variable_rate">Variable Rate
+            <input type="radio" name="interest_option" id="variable_rate" value="variable_rate"/></label>
+    </div>
+
+    <h3>Results</h3>
+    <div class="results">
+        <div id="result">{{ result }}</div>
+    </div>
+
+    <div id="table_result"></div>
+
+
+
+
+    <script src="{{ url_for('static', filename='loan-calc.js') }}"></script>
+</body>
+</html>
